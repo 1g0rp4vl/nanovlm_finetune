@@ -1,0 +1,13 @@
+diff --git a/data/datasets.py b/data/datasets.py
+index 9b5dba3..ce90f7b 100644
+--- a/data/datasets.py
++++ b/data/datasets.py
+@@ -92,6 +92,8 @@ class BaseDataset(Dataset):
+             segment_ids = self.tokenizer.apply_chat_template(
+                 [msg], tokenize=True, add_special_tokens=False
+             )
++            if hasattr(segment_ids, "keys"):
++                segment_ids = segment_ids["input_ids"]
+             seg_len = len(segment_ids)
+ 
+             if msg["role"] == "assistant":

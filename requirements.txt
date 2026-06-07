@@ -1,0 +1,16 @@
+datasets
+einops
+gymnasium
+huggingface-hub
+matplotlib
+minigrid
+numpy
+pandas
+pillow
+pyyaml
+safetensors
+scikit-learn
+torch
+torchvision
+tqdm
+transformers
